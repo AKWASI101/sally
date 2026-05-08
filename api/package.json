@@ -1,0 +1,30 @@
+{
+  "name": "sally-api",
+  "version": "1.0.0",
+  "description": "Sally E-Commerce Platform — REST API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate:up": "node-pg-migrate up --migrations-dir src/db/migrations --envPath ../.env",
+    "migrate:down": "node-pg-migrate down --migrations-dir src/db/migrations --envPath ../.env",
+    "migrate:create": "node-pg-migrate create --migrations-dir src/db/migrations",
+    "seed": "node src/db/seed.js"
+  },
+  "keywords": [],
+  "author": "AOD Webservice",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "node-pg-migrate": "^8.0.4",
+    "pg": "^8.20.0",
+    "winston": "^3.19.0"
+  }
+}

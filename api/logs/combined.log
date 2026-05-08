@@ -1,0 +1,6 @@
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-08 16:37:03"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-08 16:37:03"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-08 16:37:03"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-08 16:37:05"}
+{"email":"admin@sally.com","level":"warn","message":"Login attempt with wrong password","service":"sally-api","timestamp":"2026-05-08 16:37:06"}
+{"level":"info","message":"SIGTERM received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-08 16:37:19"}
