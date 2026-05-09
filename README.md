@@ -31,7 +31,7 @@ This monorepo contains three main applications:
 - **Frontend:** React 18, Vite
 - **Backend:** Node.js, Express
 - **Database:** PostgreSQL 16, `pg` (node-postgres), `node-pg-migrate`
-- **Notifications:** Hubtel SMS API
+- **Notifications:** mNotify SMS API
 - **Deployment:** DigitalOcean VPS, Nginx, PM2, Let's Encrypt
 
 ## Getting Started

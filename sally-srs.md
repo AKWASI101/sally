@@ -296,7 +296,7 @@ When admin marks an order as shipped, the customer shall receive an SMS with a c
 When a new order is placed, admin shall receive an SMS alert with order reference and total value.
 
 **FR-NOTIF-05 — SMS Provider**
-Hubtel SMS API shall be used as the notification provider (supports Ghana numbers natively, GHS billing).
+mNotify SMS API shall be used as the notification provider (supports Ghana numbers natively, GHS billing).
 
 **FR-NOTIF-06 — Notification Failure Handling**
 SMS failures shall be logged but shall not block the order flow. The order is created regardless of whether the SMS sends.
@@ -332,7 +332,7 @@ SMS failures shall be logged but shall not block the order flow. The order is cr
 - Database schema changes shall use migration files (node-pg-migrate or similar)
 - API shall follow RESTful conventions with consistent response envelopes
 - Codebase shall be organised in a monorepo with clear separation: `/api`, `/public-app`, `/admin-app`
-- All environment-specific config (DB credentials, MoMo number, Hubtel API key) shall use `.env` files — never hardcoded
+- All environment-specific config (DB credentials, MoMo number, mNotify API key) shall use `.env` files — never hardcoded
 
 ---
 
@@ -1099,7 +1099,7 @@ GET    /admin/dashboard
 | Migrations | node-pg-migrate | Simple, SQL-based, trackable |
 | Auth | JWT (jsonwebtoken) | Stateless, simple for single admin user |
 | File Uploads | Multer + local disk | No external storage needed at this volume |
-| SMS | Hubtel SMS API | Ghana-native, GHS billing, reliable delivery |
+| SMS | mNotify SMS API | Ghana-native, GHS billing, reliable delivery |
 | HTTP Hardening | Helmet.js | Standard security headers |
 | Rate Limiting | express-rate-limit | Protects checkout and auth endpoints |
 | Logging | Winston | File + console, structured logs |
@@ -1188,7 +1188,7 @@ These features are explicitly out of scope for v1 but should be considered in ar
 | Feature | Notes |
 |---|---|
 | Customer accounts | Login via phone + OTP. Enables order history, saved addresses |
-| Automated MoMo verification | Paystack or Hubtel Collect API integration |
+| Automated MoMo verification | Paystack or mNotify API integration |
 | Product reviews | Customers rate purchased items |
 | Discount codes | Percentage or fixed-amount codes |
 | Delivery fee calculator | Region-based fee table instead of flat fee |
@@ -1208,7 +1208,7 @@ These features are explicitly out of scope for v1 but should be considered in ar
 | 3 | What is the flat delivery fee for nationwide courier? | ❓ Open | To be confirmed — or is it region-based? |
 | 4 | Domain name for the platform? | ❓ Open | To be purchased and configured |
 | 5 | Should the public site be a subdomain of an existing domain or standalone? | ❓ Open | |
-| 6 | Hubtel SMS — does Alberta have or need a registered sender ID? | ❓ Open | Affects SMS deliverability |
+| 6 | mNotify SMS — does Alberta have or need a registered sender ID? | ❓ Open | Affects SMS deliverability |
 | 7 | Should admin be at `/admin` path or a separate subdomain e.g. `admin.sally.com`? | ❓ Open | |
 | 8 | Maximum order value before additional verification is needed? | ❓ Open | Risk management consideration |
 

@@ -6,7 +6,7 @@
  */
 
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../../.env') });
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const required = ['DATABASE_URL', 'JWT_SECRET'];
 
@@ -23,4 +23,7 @@ module.exports = {
   databaseUrl: process.env.DATABASE_URL,
   jwtSecret: process.env.JWT_SECRET,
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '8h',
+  mnotifyApiKey: process.env.MNOTIFY_API_KEY || '',
+  momoNumber: process.env.MOMO_NUMBER || '',
+  momoName: process.env.MOMO_NAME || '',
 };

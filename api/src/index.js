@@ -8,6 +8,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 // Load env FIRST — before anything else imports config
 const env = require('./config/env');
@@ -18,6 +19,12 @@ const errorHandler = require('./middleware/errorHandler');
 
 // Route modules
 const adminRoutes = require('./modules/admin/routes');
+const batchRoutes = require('./modules/batches/routes');
+const productRoutes = require('./modules/products/routes');
+
+// Ensure upload directories exist
+const uploadsDir = path.resolve(__dirname, '../uploads/products');
+fs.mkdirSync(uploadsDir, { recursive: true });
 
 const app = express();
 
@@ -55,6 +62,8 @@ app.get('/api/v1/health', (req, res) => {
 
 // ── API routes ───────────────────────────────────────────
 app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/admin/batches', batchRoutes);
+app.use('/api/v1/admin/products', productRoutes);
 
 // ── 404 handler ──────────────────────────────────────────
 app.use('/api', (req, res) => {
