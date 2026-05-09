@@ -34,3 +34,16 @@
 {"level":"info","message":"Product created","name":"Featured Product 4","productId":"b26afe3c-7a7b-4e60-81b9-4b2698821ff3","service":"sally-api","timestamp":"2026-05-09 00:59:25","type":"preorder"}
 {"level":"info","message":"Product created","name":"Featured Product 5","productId":"6bb42bc1-d00b-4455-9cbb-b9d5d00768f6","service":"sally-api","timestamp":"2026-05-09 00:59:25","type":"preorder"}
 {"level":"info","message":"Product created","name":"Featured Product 6","productId":"876cde2b-1ea9-448f-98c5-9bec729df0d5","service":"sally-api","timestamp":"2026-05-09 00:59:25","type":"preorder"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 01:07:58"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 01:10:12"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 01:10:12"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 01:10:12"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 01:10:22"}
+{"customer":"Akua Mensah","itemCount":2,"level":"info","message":"Order placed successfully","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 01:10:30","total":"955.00"}
+{"customer":"Akua Mensah","level":"info","message":"New order notification (admin)","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 01:10:30","total":"955.00"}
+{"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-09 01:10:31","to":"0244000000"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 01:10:44"}
+{"level":"info","message":"MoMo reference submitted","momoRef":"GH20260509ABCDEF123","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 01:10:53"}
+{"customer":"Kofi Asante","itemCount":1,"level":"info","message":"Order placed successfully","reference":"SAL-2026-00002","service":"sally-api","timestamp":"2026-05-09 01:11:03","total":"420.00"}
+{"customer":"Kofi Asante","level":"info","message":"New order notification (admin)","reference":"SAL-2026-00002","service":"sally-api","timestamp":"2026-05-09 01:11:03","total":"420.00"}
+{"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-09 01:11:04","to":"0277000000"}

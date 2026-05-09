@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "migrate:up": "node-pg-migrate up --migrations-dir src/db/migrations --envPath ../.env",
-    "migrate:down": "node-pg-migrate down --migrations-dir src/db/migrations --envPath ../.env",
+    "migrate:up": "node-pg-migrate up --migrations-dir src/db/migrations --envPath .env",
+    "migrate:down": "node-pg-migrate down --migrations-dir src/db/migrations --envPath .env",
     "migrate:create": "node-pg-migrate create --migrations-dir src/db/migrations",
     "seed": "node src/db/seed.js"
   },

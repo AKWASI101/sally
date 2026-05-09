@@ -21,6 +21,7 @@ const errorHandler = require('./middleware/errorHandler');
 const adminRoutes = require('./modules/admin/routes');
 const batchRoutes = require('./modules/batches/routes');
 const productRoutes = require('./modules/products/routes');
+const orderRoutes = require('./modules/orders/routes');
 
 // Ensure upload directories exist
 const uploadsDir = path.resolve(__dirname, '../uploads/products');
@@ -64,6 +65,7 @@ app.get('/api/v1/health', (req, res) => {
 app.use('/api/v1/admin', adminRoutes);
 app.use('/api/v1/admin/batches', batchRoutes);
 app.use('/api/v1/admin/products', productRoutes);
+app.use('/api/v1/orders', orderRoutes);
 
 // ── 404 handler ──────────────────────────────────────────
 app.use('/api', (req, res) => {
