@@ -85,7 +85,9 @@ const list = async (req, res, next) => {
       ? `WHERE ${conditions.join(' AND ')}`
       : '';
 
-    const offset = (parseInt(page, 10) - 1) * parseInt(limit, 10);
+    const parsedPage = Math.max(1, parseInt(page, 10) || 1);
+    const parsedLimit = Math.max(1, parseInt(limit, 10) || 20);
+    const offset = (parsedPage - 1) * parsedLimit;
 
     // Count query
     const countResult = await query(
@@ -101,17 +103,17 @@ const list = async (req, res, next) => {
        FROM orders o ${batchJoin} ${whereClause}
        ORDER BY o.created_at DESC
        LIMIT $${idx++} OFFSET $${idx++}`,
-      [...values, parseInt(limit, 10), offset]
+      [...values, parsedLimit, offset]
     );
 
     return res.json({
       success: true,
       data: rows,
       pagination: {
-        page: parseInt(page, 10),
-        limit: parseInt(limit, 10),
+        page: parsedPage,
+        limit: parsedLimit,
         total: countResult.rows[0].total,
-        pages: Math.ceil(countResult.rows[0].total / parseInt(limit, 10)),
+        pages: Math.ceil(countResult.rows[0].total / parsedLimit),
       },
     });
   } catch (err) {

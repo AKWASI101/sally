@@ -110,3 +110,16 @@
 {"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:43:05"}
 {"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:43:55"}
 {"level":"info","message":"SIGINT received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-09 17:44:34"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 18:12:46"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 18:12:46"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 18:12:46"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 18:12:54"}
+{"ip":"::1","level":"error","message":"LIMIT must not be negative","method":"GET","service":"sally-api","stack":"error: LIMIT must not be negative\n    at /home/AOD/Projects/Sally/api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async list (/home/AOD/Projects/Sally/api/src/modules/orders/adminController.js:98:22)","statusCode":500,"timestamp":"2026-05-09 18:12:54","url":"/api/v1/admin/orders?limit=-5"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 18:13:31"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 18:13:32"}
+{"ip":"::1","level":"error","message":"LIMIT must not be negative","method":"GET","service":"sally-api","stack":"error: LIMIT must not be negative\n    at /home/AOD/Projects/Sally/api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async list (/home/AOD/Projects/Sally/api/src/modules/orders/adminController.js:98:22)","statusCode":500,"timestamp":"2026-05-09 18:13:32","url":"/api/v1/admin/orders?limit=-5"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 18:13:32"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 18:13:45"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 18:13:45"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 18:13:45"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 18:13:55"}
