@@ -47,3 +47,66 @@
 {"customer":"Kofi Asante","itemCount":1,"level":"info","message":"Order placed successfully","reference":"SAL-2026-00002","service":"sally-api","timestamp":"2026-05-09 01:11:03","total":"420.00"}
 {"customer":"Kofi Asante","level":"info","message":"New order notification (admin)","reference":"SAL-2026-00002","service":"sally-api","timestamp":"2026-05-09 01:11:03","total":"420.00"}
 {"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-09 01:11:04","to":"0277000000"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:30:20"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 14:30:20"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 14:30:20"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:31:22"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 14:31:22"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:35:06"}
+{"customer":"Akua Mensah","itemCount":2,"level":"info","message":"Order placed successfully","reference":"SAL-2026-00003","service":"sally-api","timestamp":"2026-05-09 14:35:06","total":"955.00"}
+{"customer":"Akua Mensah","level":"info","message":"New order notification (admin)","reference":"SAL-2026-00003","service":"sally-api","timestamp":"2026-05-09 14:35:06","total":"955.00"}
+{"error":"fetch failed","level":"error","message":"SMS send failed","service":"sally-api","timestamp":"2026-05-09 14:35:06","to":"0244000000"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:37:03"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:38:29"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:39:17"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:40:50"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:41:27"}
+{"level":"info","message":"MoMo reference submitted","momoRef":"GH20260509ABCDEF123","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 14:42:02"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:43:19"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:44:43"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:46:22"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 14:49:27"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-09 15:02:07"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 15:47:35"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 15:47:36"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 15:47:36"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 15:54:06"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 15:54:06"}
+{"level":"info","message":"Payment confirmed","orderId":"91a3c60a-95f4-4dcc-88e3-99319f00cdb4","reference":"SAL-2026-00003","service":"sally-api","timestamp":"2026-05-09 15:54:24"}
+{"from":"payment_confirmed","level":"info","message":"Order status updated","orderId":"91a3c60a-95f4-4dcc-88e3-99319f00cdb4","reference":"SAL-2026-00003","service":"sally-api","timestamp":"2026-05-09 15:54:24","to":"processing"}
+{"level":"info","message":"Admin note added","orderId":"91a3c60a-95f4-4dcc-88e3-99319f00cdb4","service":"sally-api","timestamp":"2026-05-09 15:54:24"}
+{"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-09 15:54:26","to":"0244000000"}
+{"level":"info","message":"Order cancelled","orderId":"eb8f76da-4374-44b6-a42c-1efdaf56b2fa","reason":"Customer requested cancellation","reference":"SAL-2026-00002","service":"sally-api","stockRestored":1,"timestamp":"2026-05-09 15:54:33"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 15:54:33"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 15:59:33"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 15:59:33"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 15:59:33"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:00:03"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 16:00:03"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:00:47"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:01:38"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:03:25"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:04:42"}
+{"level":"info","message":"Payment confirmed","orderId":"e3cd674f-0379-422a-9170-8e473ed81179","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 16:04:42"}
+{"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-09 16:04:43","to":"0244000000"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 16:07:08"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:00:15"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 17:00:15"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-09 17:04:28"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:36:39"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 17:36:39"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 17:36:39"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 17:37:00"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:38:29"}
+{"from":"payment_confirmed","level":"info","message":"Order status updated","orderId":"e3cd674f-0379-422a-9170-8e473ed81179","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-09 17:38:29","to":"processing"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:39:21"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:40:22"}
+{"level":"info","message":"Admin note added","orderId":"e3cd674f-0379-422a-9170-8e473ed81179","service":"sally-api","timestamp":"2026-05-09 17:40:22"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:40:56"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:41:37"}
+{"level":"info","message":"Order cancelled","orderId":"91a3c60a-95f4-4dcc-88e3-99319f00cdb4","reason":"Customer changed mind","reference":"SAL-2026-00003","service":"sally-api","stockRestored":1,"timestamp":"2026-05-09 17:41:37"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:41:37"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:42:13"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:43:05"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-09 17:43:55"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-09 17:44:34"}

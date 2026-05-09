@@ -19,9 +19,11 @@ const errorHandler = require('./middleware/errorHandler');
 
 // Route modules
 const adminRoutes = require('./modules/admin/routes');
+const { getDashboard } = require('./modules/admin/dashboardController');
 const batchRoutes = require('./modules/batches/routes');
 const productRoutes = require('./modules/products/routes');
 const orderRoutes = require('./modules/orders/routes');
+const adminOrderRoutes = require('./modules/orders/adminRoutes');
 
 // Ensure upload directories exist
 const uploadsDir = path.resolve(__dirname, '../uploads/products');
@@ -65,7 +67,12 @@ app.get('/api/v1/health', (req, res) => {
 app.use('/api/v1/admin', adminRoutes);
 app.use('/api/v1/admin/batches', batchRoutes);
 app.use('/api/v1/admin/products', productRoutes);
+app.use('/api/v1/admin/orders', adminOrderRoutes);
 app.use('/api/v1/orders', orderRoutes);
+
+// Dashboard (single route, auth handled inline)
+const authMiddleware = require('./middleware/auth');
+app.get('/api/v1/admin/dashboard', authMiddleware, getDashboard);
 
 // ── 404 handler ──────────────────────────────────────────
 app.use('/api', (req, res) => {

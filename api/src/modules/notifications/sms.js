@@ -1,9 +1,9 @@
 /**
- * SMS notification service using mNotify API.
- *
- * Per SRS §FR-NOTIF-06: SMS failures are logged but never block the order flow.
- * All functions are fire-and-forget — they catch their own errors.
- */
+* SMS notification service using mNotify API.
+*
+* Per SRS §FR-NOTIF-06: SMS failures are logged but never block the order flow.
+* All functions are fire-and-forget — they catch their own errors.
+*/
 
 const env = require('../../config/env');
 const logger = require('../../utils/logger');

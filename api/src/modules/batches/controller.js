@@ -214,4 +214,95 @@ const listOrders = async (req, res, next) => {
   }
 };
 
-module.exports = { list, create, update, listOrders };
+/**
+ * GET /api/v1/admin/batches/:id/export
+ *
+ * Exports a CSV of all orders in a batch — customer name, phone,
+ * delivery region, address, items ordered, and payment status.
+ * Supports courier handoff (SRS §FR-ADM-BATCH-06).
+ */
+const exportCSV = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    // Verify batch exists
+    const batch = await query('SELECT id, name FROM batches WHERE id = $1', [id]);
+    if (batch.rows.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: 'Batch not found.',
+      });
+    }
+
+    // Get all orders with items in this batch
+    const { rows } = await query(
+      `SELECT
+         o.reference,
+         o.customer_name,
+         o.customer_phone,
+         o.delivery_region,
+         o.delivery_address,
+         o.payment_status,
+         o.fulfillment_status,
+         o.total,
+         string_agg(
+           oi.product_name || ' x' || oi.quantity,
+           '; ' ORDER BY oi.product_name
+         ) AS items_summary
+       FROM orders o
+       JOIN order_items oi ON oi.order_id = o.id
+       JOIN products p     ON p.id = oi.product_id
+       WHERE p.batch_id = $1
+       GROUP BY o.id
+       ORDER BY o.created_at ASC`,
+      [id]
+    );
+
+    // Build CSV
+    const headers = [
+      'Order Reference',
+      'Customer Name',
+      'Phone',
+      'Region',
+      'Address',
+      'Items',
+      'Total (GHS)',
+      'Payment Status',
+      'Fulfillment Status',
+    ];
+
+    const escapeCSV = (val) => {
+      const str = String(val || '');
+      if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+        return `"${str.replace(/"/g, '""')}"`;
+      }
+      return str;
+    };
+
+    const csvRows = [headers.join(',')];
+    for (const row of rows) {
+      csvRows.push([
+        escapeCSV(row.reference),
+        escapeCSV(row.customer_name),
+        escapeCSV(row.customer_phone),
+        escapeCSV(row.delivery_region),
+        escapeCSV(row.delivery_address),
+        escapeCSV(row.items_summary),
+        escapeCSV(row.total),
+        escapeCSV(row.payment_status),
+        escapeCSV(row.fulfillment_status),
+      ].join(','));
+    }
+
+    const csv = csvRows.join('\n');
+    const batchName = batch.rows[0].name.replace(/[^a-zA-Z0-9]/g, '_');
+
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', `attachment; filename="${batchName}_orders.csv"`);
+    return res.send(csv);
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { list, create, update, listOrders, exportCSV };
