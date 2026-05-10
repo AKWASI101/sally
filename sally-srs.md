@@ -325,7 +325,7 @@ SMS failures shall be logged but shall not block the order flow. The order is cr
 
 ### 5.4 Usability
 - Public site shall be fully responsive — mobile-first design (majority of Ghanaian users are on mobile)
-- Admin site shall be usable on tablet and desktop
+- Admin site shall be fully responsive — mobile-first design (admin handles day-to-day operations primarily via mobile)
 - All destructive admin actions (cancel order, archive product, close batch) shall require a confirmation dialog
 
 ### 5.5 Maintainability

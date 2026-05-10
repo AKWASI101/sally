@@ -34,9 +34,35 @@ This monorepo contains three main applications:
 - **Notifications:** mNotify SMS API
 - **Deployment:** DigitalOcean VPS, Nginx, PM2, Let's Encrypt
 
+## Development Progress
+
+The current phase of development has focused on building the backend API foundation. The following modules and infrastructure are complete:
+
+### Infrastructure & Core
+- Express API foundation with robust security middleware (Helmet, CORS).
+- Rate limiting configuration for API endpoints and strict limits for auth routes.
+- Centralized Winston logger with file and console transports.
+- PostgreSQL database connection pool.
+- Global centralized error handling.
+
+### Admin & Authentication
+- JWT-based authentication for the admin portal.
+- Secure login mechanism and session handling.
+- High-level admin dashboard summary endpoint.
+
+### Core Modules
+- **Batches**: Management of preorder batches (create, update, close).
+- **Products**: Product management including image uploading (via Multer), associating with batches, and listing.
+- **Orders (Public)**: Order creation with cart items, and order tracking via phone number/reference ID.
+- **Orders (Admin)**: Management of order statuses, manual MoMo payment verification, and order list retrieval.
+
 ## Getting Started
 
-*(Detailed installation and environment setup instructions will be added here as the individual sub-projects are bootstrapped).*
+### Prerequisites
+- Node.js (v18+)
+- PostgreSQL (v16+)
+
+*(Detailed installation and environment setup instructions will be expanded as the individual sub-projects are bootstrapped).*
 
 ## Documentation
 

@@ -123,3 +123,15 @@
 {"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-09 18:13:45"}
 {"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-09 18:13:45"}
 {"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-09 18:13:55"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-10 00:38:52"}
+{"level":"debug","message":"New database connection established","service":"sally-api","timestamp":"2026-05-10 00:39:23"}
+{"level":"info","message":"Database connection verified","service":"sally-api","timestamp":"2026-05-10 00:39:23"}
+{"environment":"development","level":"info","message":"Sally API running on port 3000","port":3000,"service":"sally-api","timestamp":"2026-05-10 00:39:23"}
+{"email":"admin@sally.com","level":"warn","message":"Login attempt with wrong password","service":"sally-api","timestamp":"2026-05-10 00:39:30"}
+{"email":"admin@sally.com","level":"info","message":"Admin logged in successfully","service":"sally-api","timestamp":"2026-05-10 00:39:40"}
+{"from":"processing","level":"info","message":"Order status updated","orderId":"e3cd674f-0379-422a-9170-8e473ed81179","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-10 00:40:05","to":"shipped"}
+{"level":"info","message":"SMS sent via mNotify","service":"sally-api","status":"{\"status\":\"error\",\"code\":\"1004\",\"message\":\"Invalid API key.\"}","timestamp":"2026-05-10 00:40:06","to":"0244000000"}
+{"from":"shipped","level":"info","message":"Order status updated","orderId":"e3cd674f-0379-422a-9170-8e473ed81179","reference":"SAL-2026-00001","service":"sally-api","timestamp":"2026-05-10 00:40:11","to":"delivered"}
+{"batchId":"ee549bf3-bd5e-4260-ba51-725642a2f4d0","deactivatedCount":7,"level":"info","message":"Batch closed — deactivated linked products","products":["Vitamin C Brightening Serum","Featured Product 1","Featured Product 2","Featured Product 3","Featured Product 4","Featured Product 5","Featured Product 6"],"service":"sally-api","timestamp":"2026-05-10 00:40:57"}
+{"batchId":"ee549bf3-bd5e-4260-ba51-725642a2f4d0","level":"info","message":"Batch updated","service":"sally-api","timestamp":"2026-05-10 00:40:57"}
+{"level":"info","message":"SIGINT received — shutting down gracefully","service":"sally-api","timestamp":"2026-05-10 00:42:11"}
