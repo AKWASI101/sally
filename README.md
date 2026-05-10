@@ -1,13 +1,13 @@
-# Sally
+# King Sally Imports Platform
 
-Sally is a full-stack e-commerce platform purpose-built for an import/resale business operating in Ghana. It transitions the business from a manual WhatsApp-based ordering model to a robust web-based storefront and admin management system.
+King Sally Imports is a full-stack e-commerce platform purpose-built for an import/resale business operating in Ghana. It transitions the business from a manual WhatsApp-based ordering model to a robust web-based storefront and admin management system.
 
 ## Project Structure
 
 This monorepo contains three main applications:
 
 - `api/`: Node.js/Express REST API and PostgreSQL database
-- `public-app/`: Customer-facing React/Vite storefront
+- `storefront-app/`: Customer-facing React/Vite storefront
 - `admin-app/`: Private management interface for the business owner
 
 ## Features
@@ -28,7 +28,7 @@ This monorepo contains three main applications:
 
 ## Technology Stack
 
-- **Frontend:** React 18, Vite
+- **Frontend:** React 18, Vite, vanilla CSS with Lucide Icons
 - **Backend:** Node.js, Express
 - **Database:** PostgreSQL 16, `pg` (node-postgres), `node-pg-migrate`
 - **Notifications:** mNotify SMS API
@@ -36,25 +36,12 @@ This monorepo contains three main applications:
 
 ## Development Progress
 
-The current phase of development has focused on building the backend API foundation. The following modules and infrastructure are complete:
+**Version 1.0 (MVP) is officially complete and ready for deployment.**
 
-### Infrastructure & Core
-- Express API foundation with robust security middleware (Helmet, CORS).
-- Rate limiting configuration for API endpoints and strict limits for auth routes.
-- Centralized Winston logger with file and console transports.
-- PostgreSQL database connection pool.
-- Global centralized error handling.
-
-### Admin & Authentication
-- JWT-based authentication for the admin portal.
-- Secure login mechanism and session handling.
-- High-level admin dashboard summary endpoint.
-
-### Core Modules
-- **Batches**: Management of preorder batches (create, update, close).
-- **Products**: Product management including image uploading (via Multer), associating with batches, and listing.
-- **Orders (Public)**: Order creation with cart items, and order tracking via phone number/reference ID.
-- **Orders (Admin)**: Management of order statuses, manual MoMo payment verification, and order list retrieval.
+### Completed Phases:
+1. **API & Database Foundation:** Built a secure Express REST API with PostgreSQL, integrated with mNotify for automated SMS updates.
+2. **Admin Portal:** Deployed a secure, mobile-first private React dashboard for full lifecycle management of products, batches, and orders.
+3. **Public Storefront:** Launched a premium, dynamic React frontend featuring a persistent shopping cart, MoMo checkout integration, and self-service order tracking.
 
 ## Getting Started
 
@@ -62,7 +49,26 @@ The current phase of development has focused on building the backend API foundat
 - Node.js (v18+)
 - PostgreSQL (v16+)
 
-*(Detailed installation and environment setup instructions will be expanded as the individual sub-projects are bootstrapped).*
+### Local Development Setup
+
+To run the platform locally, you will need to open three separate terminal windows to start each application:
+
+```bash
+# Terminal 1 — Start the Backend API (runs on port 3000)
+cd api
+npm install
+npm run dev
+
+# Terminal 2 — Start the Admin Dashboard (runs on port 5174)
+cd admin-app
+npm install
+npm run dev
+
+# Terminal 3 — Start the Public Storefront (runs on port 5175)
+cd storefront-app
+npm install
+npm run dev
+```
 
 ## Documentation
 
