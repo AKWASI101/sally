@@ -22,6 +22,7 @@ const adminRoutes = require('./modules/admin/routes');
 const { getDashboard } = require('./modules/admin/dashboardController');
 const batchRoutes = require('./modules/batches/routes');
 const productRoutes = require('./modules/products/routes');
+const publicProductRoutes = require('./modules/products/publicRoutes');
 const orderRoutes = require('./modules/orders/routes');
 const adminOrderRoutes = require('./modules/orders/adminRoutes');
 
@@ -69,6 +70,7 @@ app.use('/api/v1/admin/batches', batchRoutes);
 app.use('/api/v1/admin/products', productRoutes);
 app.use('/api/v1/admin/orders', adminOrderRoutes);
 app.use('/api/v1/orders', orderRoutes);
+app.use('/api/v1/products', publicProductRoutes);
 
 // Dashboard (single route, auth handled inline)
 const authMiddleware = require('./middleware/auth');
