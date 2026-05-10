@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div className="login-page">
       <form className="login-card" onSubmit={handleSubmit}>
-        <div className="login-brand">Sally</div>
+        <div className="login-brand">King Sally Imports</div>
         <p className="login-subtitle">Admin Dashboard</p>
 
         {error && <div className="login-error">{error}</div>}

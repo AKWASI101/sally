@@ -28,7 +28,7 @@ const sendSMS = async (to, message) => {
       key: env.mnotifyApiKey,
       to,
       msg: message,
-      sender_id: 'Sally',
+      sender_id: 'King Sally',
     });
 
     const response = await fetch(`${MNOTIFY_BASE_URL}?${params.toString()}`);
@@ -46,7 +46,7 @@ const sendSMS = async (to, message) => {
  * FR-NOTIF-01: Notify customer that their order has been placed.
  */
 const notifyOrderPlaced = async (order) => {
-  const message = `Hi ${order.customer_name}, your order ${order.reference} has been placed! Total: GHS ${order.total}. Please send GHS ${order.total} via MoMo to ${env.momoNumber} (${env.momoName}). Include ${order.reference} in the payment note.`;
+  const message = `Hi ${order.customer_name}, your order ${order.reference} has been placed! Total: GHS ${order.total}. Please complete your payment by following the instructions in your checkout screen  Reference: ${order.reference}.`;
   await sendSMS(order.customer_phone, message);
 };
 

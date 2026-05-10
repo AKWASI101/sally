@@ -24,7 +24,7 @@ export default function Layout() {
           <button className="topbar__menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
             {menuOpen ? '✕' : '☰'}
           </button>
-          <span className="topbar__brand">Sally</span>
+          <span className="topbar__brand">King Sally Imports</span>
         </div>
         <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Logout</button>
       </header>

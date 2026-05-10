@@ -86,7 +86,7 @@ export default function OrderConfirmation() {
           <div className="momo-num">2</div>
           <div>
             <p className="fw-semi text-sm">Send money to: <span style={{ color:'var(--brand)', fontFamily:'monospace' }}>{MOMO_NUMBER}</span></p>
-            <p className="text-xs text-muted">Name: Sally Enterprise</p>
+            <p className="text-xs text-muted">Name: King Sally Imports</p>
           </div>
         </div>
         <div className="momo-step">

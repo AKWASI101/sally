@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__inner">
-        <Link to="/" className="navbar__brand">Sally</Link>
+        <Link to="/" className="navbar__brand">King Sally Imports</Link>
 
         <div className="navbar__links">
           <NavLink to="/" end className={({ isActive }) => `navbar__link${isActive ? ' active' : ''}`}>Home</NavLink>
