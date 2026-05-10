@@ -6,10 +6,9 @@
  */
 
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
+require('dotenv').config({ path: '/opt/sally/.env' });
 
-const required = ['DATABASE_URL', 'JWT_SECRET'];
-
+const required = ['DATABASE_URL', 'JWT_SECRET', 'CORS_ORIGIN'];
 for (const key of required) {
   if (!process.env[key]) {
     console.error(`✗ Missing required environment variable: ${key}`);
@@ -26,4 +25,5 @@ module.exports = {
   mnotifyApiKey: process.env.MNOTIFY_API_KEY || '',
   momoNumber: process.env.MOMO_NUMBER || '',
   momoName: process.env.MOMO_NAME || '',
+  corsOrigin: process.env.CORS_ORIGIN,
 };

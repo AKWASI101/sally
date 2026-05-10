@@ -38,7 +38,7 @@ app.use(helmet());
 // ── CORS ─────────────────────────────────────────────────
 app.use(cors({
   origin: env.nodeEnv === 'production'
-    ? [/* production domains will go here */]
+    ? [env.corsOrigin]
     : '*',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],

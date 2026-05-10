@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "migrate:up": "node-pg-migrate up --migrations-dir src/db/migrations --envPath .env",
-    "migrate:down": "node-pg-migrate down --migrations-dir src/db/migrations --envPath .env",
+    "migrate:up": "node-pg-migrate up --migrations-dir src/db/migrations --envPath ../.env",
+    "migrate:down": "node-pg-migrate down --migrations-dir src/db/migrations --envPath ../.env",
     "migrate:create": "node-pg-migrate create --migrations-dir src/db/migrations",
     "seed": "node src/db/seed.js"
   },
@@ -17,7 +17,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
+    "dotenv": "^16.6.1",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.1",
     "helmet": "^8.1.0",
