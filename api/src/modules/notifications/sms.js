@@ -28,7 +28,7 @@ const sendSMS = async (to, message) => {
       key: env.mnotifyApiKey,
       to,
       msg: message,
-      sender_id: 'King Sally',
+      sender_id: 'KS Imports',
     });
 
     const response = await fetch(`${MNOTIFY_BASE_URL}?${params.toString()}`);
